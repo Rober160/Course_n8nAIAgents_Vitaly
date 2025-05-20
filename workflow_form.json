@@ -1,0 +1,139 @@
+{
+  "name": "workflow_form",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Primera Prueba",
+        "formDescription": "Primer Formulario realizado en n8n",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nombre"
+            },
+            {
+              "fieldLabel": "Apellidos"
+            },
+            {
+              "fieldLabel": "DNI"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e7a0207c-1528-468a-a815-2f2ce9683b2a",
+      "name": "On form submission",
+      "webhookId": "f27a9b7c-2a1e-4dbd-a0a9-f764142622cc"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appUAYmospUb5XlGa",
+          "mode": "list",
+          "cachedResultName": "DatosTrabajador",
+          "cachedResultUrl": "https://airtable.com/appUAYmospUb5XlGa"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblUMuf1Q5WGoQH2I",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appUAYmospUb5XlGa/tblUMuf1Q5WGoQH2I"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre": "={{ $json.Nombre }}",
+            "Apellidos": "={{ $json.Apellidos }}",
+            "DNI": "={{ $json.DNI }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nombre",
+              "displayName": "Nombre",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Apellidos",
+              "displayName": "Apellidos",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "DNI",
+              "displayName": "DNI",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "5dc69c42-b997-4201-a15d-67c79d11dcf8",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "PcTEVDcLEoScJbNC",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "82d697f2-067e-4ec6-9168-e2c4791869c7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a00ab3ab55b4cb0c97da55e5a01c51c07b2e505a42085ff986edf6c4066204f8"
+  },
+  "id": "u3hsIv5mQNEDQHig",
+  "tags": []
+}
