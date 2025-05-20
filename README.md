@@ -1,4 +1,4 @@
-# Course_n8nVitaly
+# Course_n8nAIAgents_Vitaly
 Curso n8n automatización realizado durante las prácticas en Vitaly
 
 ## ⚙️ ¿Qué es n8n?
