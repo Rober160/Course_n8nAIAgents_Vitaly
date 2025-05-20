@@ -92,6 +92,7 @@ n8n permite crear **workflows automáticos** que usan agentes de IA para ejecuta
 
 ✅ Los agentes de IA son ideales para construir asistentes inteligentes, bots de soporte, automatización de tareas y sistemas de recomendación avanzados.
 
+---
 
 ## 🧠 RAG (Retrieval-Augmented Generation) y Bases de Datos Vectoriales
 
